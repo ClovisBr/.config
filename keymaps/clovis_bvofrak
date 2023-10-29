@@ -1,0 +1,101 @@
+// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
+// │     │LOCK │LOCK │LOCK │LOCK │LOCK │LOCK │LOCK │LOCK │LOCK │LOCK │LOCK │LOCK ┃ ⌫ Retour┃
+// │ ESC │ FN1 │ FN2 │ FN3 │ FN4 │ FN5 │ FN6 │ FN7 │ FN8 │ FN9 │FN10 │FN11 │FN12 ┃  arrière┃
+// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
+// ┃       ┃     │     │     │Shift│Shift│Shift│Shift│     │     │     │     │     ┃Entrée ┃
+// ┃ Tab ↹ ┃Ctrl │ Alt │ Win │ Alt │Ctrl │Ctrl │ Alt │ Win │ Alt │Ctrl │     │     ┃   ⏎   ┃
+// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
+// ┃  LOCK  ┃     │     │     │     │     │     │     │     │     │     │     │     ┃      ┃
+// ┃  BASE  ┃MACRO│EMOJI│AltGr│Shift│ NAV │ NAV │Shift│AltGr│EMOJI│MACRO│     │     ┃      ┃
+// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
+// ┃ LOCK  ┃Ctrl │ Alt │Shift│ Alt │Shift│ ALL │Shift│ Alt │Shift│ Alt │Ctrl ┃    LOCK     ┃
+// ┃ NAV   ┃ Win │ Win │ Win │Ctrl │AtCtl│MODS │AtCtl│Ctrl │ Win │ Win │ Win ┃     NAV     ┃
+// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
+// ┃       ┃       ┃       ┃ ␣         Espace fine insécable ⍽ ┃       ┃       ┃       ┃
+// ┃       ┃       ┃       ┃ ␣ Espace       Espace insécable ⍽ ┃       ┃       ┃       ┃
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┛
+
+default partial alphanumeric_keys
+xkb_symbols "basic" {
+
+    key <AD01>	{ [         j,             J,    braceleft               ] };
+    key <AD02>	{ [         d,             D,  bracketleft,guillemetleft ] };
+    key <AD03>	{ [         l,             L,    parenleft,         less ] };
+    key <AD04>	{ [apostrophe,      quotedbl,        grave,        acute ] };
+    key <AD05>	{ [         x,             X,       ugrave               ] };
+    key <AD06>	{ [         w,             W                             ] };
+    key <AD07>	{ [         b,             B,       dollar               ] };
+    key <AD08>	{ [         o,             O,           oe,           OE ] };
+    key <AD09>	{ [         p,             P,   parenright,      greater ] };
+    key <AD10>	{ [    eacute,        Eacute, bracketright,guillemetright] };
+    key <AD11>	{ [  question,        exclam,   braceright               ] };
+    key <AD12>	{ [         k,             K                             ] };
+// ┌─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┬─────┲━━━━━━━━━┓
+// │     │     │     │     │     │     │     │     │     │     │     │     │     ┃ ⌫ Retour┃
+// │     │     │     │     │     │     │     │     │     │     │     │     │     ┃  arrière┃
+// ┢━━━━━┷━┱───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┴─┬───┺━┳━━━━━━━┫
+// ┃       ┃ J   │ D « │ L < │ " ´ │ X   │ W   │ B   │ O Œ │ P > │ É » │ !   │ K   ┃Entrée ┃
+// ┃Tab ↹  ┃ j { │ d [ │ l ( │ ' ` │ x ù │ w   │ b $ │ o œ │ p ) │ é ] │ ? } │ k   ┃   ⏎   ┃
+// ┣━━━━━━━┻┱────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┴┬────┺┓      ┃
+// ┃        ┃ N 0 │ T 2 │ R 4 │ S 6 │ M 8 │ ;   │ U _ │ E & │ I # │ A | │ Z   │ Ç   ┃      ┃
+// ┃Maj ⇬   ┃ n 1 │ t 3 │ r 5 │ s 7 │ m 9 │ , = │ u / │ e * │ i + │ a - │ z   │ ç   ┃      ┃
+// ┣━━━━━━━┳┹────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┬┴────┲┷━━━━━┻━━━━━━┫
+// ┃       ┃ Q ÷ │ F × │ H ± │ C ° │ V   │ ¨ ´ │ :   │ G   │ È   │ Y   │ À   ┃             ┃
+// ┃       ┃ q \ │ f % │ h @ │ c ~ │ v ~ │ ^ ` │ .   │ g   │ è € │ y   │ à   ┃             ┃
+// ┣━━━━━━━╋━━━━━┷━┳━━━┷━━━┱─┴─────┴─────┴─────┴─────┴─────┴───┲━┷━━━━━╈━━━━━┻━┳━━━━━━━┳━━━┛
+// ┃       ┃       ┃       ┃ ␣         Espace fine insécable ⍽ ┃       ┃       ┃       ┃
+// ┃       ┃       ┃       ┃ ␣ Espace       Espace insécable ⍽ ┃       ┃       ┃       ┃
+// ┗━━━━━━━┻━━━━━━━┻━━━━━━━┹───────────────────────────────────┺━━━━━━━┻━━━━━━━┻━━━━━━━┛
+
+    key <AC01>	{ [         n,          N,            0,            1 ]	};
+    key <AC02>	{ [         t,          T,            2,            3 ]	};
+    key <AC03>	{ [         r,          R,            4,            5 ]	};
+    key <AC04>	{ [         s,          S,            6,            7 ]	};
+    key <AC05>	{ [         m,          M,            8,            9 ]	};
+    key <AC06>	{ [     comma,  semicolon,        equal               ]	};
+    key <AC07>	{ [         u,          U,        slash,   underscore ]	};
+    key <AC08>	{ [         e,          E,     asterisk,    ampersand ]	};
+    key <AC09>	{ [         i,          I,         plus,   numbersign ]	};
+    key <AC10>	{ [         a,          A,        minus,          bar ]	};
+    key <AC11>	{ [         z,          Z                             ]	};
+    key <BKSL>	{ [  ccedilla,   Ccedilla                             ]	};
+
+    key <LSGT>	{ [         q,          Q,    backslash,     division ]	};
+    key <AB01>	{ [         f,          F,      percent,      multiply ]	};
+    key <AB02>	{ [         h,          H,           at,    plusminus ] };
+    key <AB03>	{ [         c,          C,   asciitilde,       degree ]	};
+    key <AB04>	{ [         v,          V,   dead_tilde               ]	};
+    key <AB05>	{ [dead_circumflex,dead_diaeresis,dead_grave,dead_acute]};
+    key <AB06>	{ [    period,      colon                             ]	};
+    key <AB07>	{ [         g,          G                             ]	};
+    key <AB08>	{ [    egrave,     Egrave,     EuroSign               ]	};
+    key <AB09>	{ [         y,          Y                             ]	};
+    key <AB10>	{ [    agrave,     Agrave                             ] };
+
+    key <TLDE>	{ [   										] };
+    key <AE01>	{ [       ampersand,               1,          dead_acute,       periodcentered ] };
+    key <AE02>	{ [          eacute,               2,          asciitilde,               Eacute ] };
+    key <AE03>	{ [        quotedbl,               3,          numbersign,              cedilla ] };
+    key <AE04>	{ [      apostrophe,               4,           braceleft,                acute ] };
+    key <AE05>	{ [       parenleft,               5,         bracketleft,            diaeresis ] };
+    key <AE06>	{ [           minus,               6,                 bar,            brokenbar ] };
+    key <AE07>	{ [          egrave,               7,          dead_grave,               Egrave ] };
+    key <AE08>	{ [      underscore,               8,           backslash,               macron ] };
+    key <AE09>	{ [        ccedilla,               9,         asciicircum,             Ccedilla ] };
+    key <AE10>	{ [          agrave,               0,                  at,               Agrave ] };
+    key <AE11>	{ [      parenright,          degree,        bracketright,           ydiaeresis ] };
+    key <AE12>	{ [           equal,            plus,          braceright,       dead_abovering ] };
+
+    key <KP1> { [ dead_circumflex,  dead_diaeresis,          dead_tilde,           apostrophe ] };
+    key <KP2> { [          dollar,        sterling,         ecircumflex,           ediaeresis ] };
+    key <KP3> { [          ugrave,         percent,         twosuperior,               Ugrave ] };
+    key <KP4> { [        asterisk,              mu,       threesuperior,                  yen ] };
+    key <KP5> { [            less,         greater,                 bar                       ] };
+    key <KP6> { [           comma,        question,        questiondown                       ] };
+    key <KP7> { [       semicolon,          period,            multiply   		      ] };
+    key <KP8> { [           colon,           slash,            division                       ] };
+    key <KP9> { [          exclam,         section,          exclamdown                       ] };
+
+    include "level3(ralt_switch)"
+};
+
